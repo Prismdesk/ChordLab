@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#111827" />
+    <meta name="description" content="Explore chords on piano, guitar and ukulele, write songs, and run setlists. Works offline." />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Chordlab" />
+    <title>Chordlab</title>
+  </head>
+  <body>
+    <div id="root"><p id="boot" style="font:16px/1.5 system-ui,sans-serif;padding:24px;color:#333">Loading Chordlab…</p></div>
+    <script>
+      // If the app never starts (for example the site was published from the source files instead of the built app), say so.
+      setTimeout(function () {
+        var boot = document.getElementById("boot");
+        if (boot) boot.innerHTML = "<strong>Chordlab didn’t start.</strong><br>The page is missing its built files (app.js and app.css). Upload every file from the project to the repository, including index.html, app.js, app.css and sw.js. See the README, section “Blank white page”.";
+      }, 3000);
+    </script>
+    <script type="module" src="./main.tsx"></script>
+  </body>
+</html>
